@@ -1,0 +1,31 @@
+version: '3.1'
+
+services:
+  app:
+    #image: shinsenter/php:8.2-fpm-apache
+    #image: php:fpm-bullseye
+    image: debian:buster-slim
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      CI_DB_HOST: cidb
+      CI_DB_USER: cidbuser
+      CI_DB_PASSWORD: cidbpassword
+      CI_DB_NAME: cidb
+    volumes:
+      - ../..:/workspaces:cached
+
+  db:
+    image: mariadb
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: cidb
+      MYSQL_USER: cidbuser
+      MYSQL_PASSWORD: cidbpassword
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  db:

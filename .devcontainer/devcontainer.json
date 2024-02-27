@@ -1,0 +1,42 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+    "name": "Codeigniter Developement Environment Anywhere",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "username": "vscode"
+        },
+        "ghcr.io/devcontainers/features/php:1":{
+            "version": "7.2",
+            "installComposer": "true"
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "20"
+        },
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+        "ghcr.io/devcontainers/features/git:1": {},
+    },
+    "onCreateCommand": "sudo chmod +x .devcontainer/install-tools.sh && .devcontainer/install-tools.sh > .devcontainer/onCreateCommand.log",
+    "postCreateCommand": "sudo chmod +x .devcontainer/setup.sh && .devcontainer/setup.sh > .devcontainer/postCreateCommand.log",
+    "forwardPorts": [
+        8080
+    ],
+    "remoteUser": "vscode",
+
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            //"settings": {},
+            //"devPort": {},
+            // Specify which VS Code extensions to install (List of IDs)
+            "extensions": [
+                "vscodevim.vim"
+                ]
+            }
+        }
+}
