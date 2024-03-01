@@ -4,8 +4,10 @@ services:
   app:
     #image: shinsenter/php:8.2-fpm-apache
     #image: php:fpm-bullseye
-    image: debian:buster-slim
+    image: debian:bullseye
     restart: always
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     ports:
       - 8080:80
     environment:
