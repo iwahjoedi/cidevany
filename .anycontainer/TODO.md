@@ -2,6 +2,17 @@
 
 * Redesign readme.md for better readability
 * Update issue templates
+* Usage
+
+Usage:
+./dev_build_container.sh [OPTIONS]
+Options:
+-a PHP Version
+-b RDBMS Version
+-c PHPMySQL Version
+-e REDIS Version
+
+
 
 Support Images:
 1. Operating System

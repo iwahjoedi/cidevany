@@ -3,8 +3,9 @@ version: '3.1'
 services:
   app:
     #image: shinsenter/php:8.2-fpm-apache
-    #image: php:fpm-bullseye
-    image: debian:bullseye
+    #image: php:apache-bullseye
+    #image: anycontainer:cidevanny-bullseye
+    image: php:8.3-apache-bookworm
     restart: always
     extra_hosts:
       - "host.docker.internal:host-gateway"
@@ -19,7 +20,7 @@ services:
       - ../..:/workspaces:cached
 
   db:
-    image: mariadb
+    image: mariadb:10.11.7-jammy
     restart: unless-stopped
     environment:
       MYSQL_DATABASE: cidb

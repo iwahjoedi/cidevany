@@ -10,3 +10,5 @@ Anycontainer is a docker image builder for some configuration.
 Stacks:
 1. Mariadb 10.3
 2. PHP 8.3
+3. Redis 7.2.3
+4. PHPMyAdmin 

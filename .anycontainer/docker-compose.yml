@@ -73,6 +73,5 @@ services:
     build:
       context: ./bin/${REDISVERSION}
     container_name: "${COMPOSE_PROJECT_NAME}-redis"
-    image: redis:${REDISVERSION}
     ports:
       - "127.0.0.1:${HOST_MACHINE_REDIS_PORT}:6379"

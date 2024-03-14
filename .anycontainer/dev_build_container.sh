@@ -77,7 +77,7 @@ build () {
 buildenvfile () {
 
 cat sample.env > ./buildtest/"$buildtarget"-"$version".env
-sed -i "s/COMPOSE_PROJECT_NAME=lamp/COMPOSE_PROJECT_NAME=$buildtarget-buildtest/" ./buildtest/"$buildtarget"-"$version".env
+sed -i "s/COMPOSE_PROJECT_NAME=cidevany/COMPOSE_PROJECT_NAME=$buildtarget-buildtest/" ./buildtest/"$buildtarget"-"$version".env
 sed -i "s/PHPVERSION=php8/PHPVERSION=$buildtarget/" ./buildtest/"$buildtarget"-"$version".env
 sed -i "s/DATABASE=mysql8/DATABASE=$version/" ./buildtest/"$buildtarget"-"$version".env
 }
@@ -94,6 +94,8 @@ cleanup () {
 
 echo "### cleaning old env file"
 rm -rf ./buildtest/"$buildtarget"*
+sudo rm -rf ./data/mysql/*
+sudo rm -rf ./data/mysql/.my-healthcheck.cnf
 }
 
 while getopts ":b:" opt;
@@ -113,11 +115,32 @@ if [[ $osversion != 'Linux' ]]; then
         exit
 fi
 
-# we don't want to test. we wanto build
-checkdep
-prepare
-buildenvfile "$buildtarget" "$version"
-build "$buildtarget" "$version"
-cleanup
+# we don't want to test against mysql8 for the old
+# php versions due to pdo, therefore we only
+# take the first 5 elements of the database versions arrays
+
+if [ "$buildtarget" == 'php54' ]||[ "$buildtarget" == 'php56' ]||[ "$buildtarget" == 'php71' ]||\
+   [ "$buildtarget" == 'php72' ]||[ "$buildtarget" == 'php73' ] ; then
+        for version in "${dbarr[@]:0:5}"
+        do
+                checkdep
+                prepare
+                buildenvfile "$buildtarget" "$version"
+                build "$buildtarget" "$version"
+                cleanup
+        done
+elif [ "$buildtarget" == 'php74' ]||[ "$buildtarget" == 'php8' ]||[ "$buildtarget" == 'php81' ] || [ "$buildtarget" == 'php82' ] || [ "$buildtarget" == 'php83' ] ; then
+        for version in "${dbarr[@]}"
+        do
+                checkdep
+                prepare
+                buildenvfile "$buildtarget" "$version"
+                build "$buildtarget" "$version"
+                cleanup
+        done
+else
+        echo "Input not valid"
+        usage
+fi
 
 exit
