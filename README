@@ -1,1 +1,20 @@
+# Codeigniter Development Environment Anyware
+
+## Requirement 
+1. Debian
+2. Apache/SSL
+3. PHP
+4. NodeJS
+ 
+## Mode
+1. VSCode at Local Anycontainer
+2. VSCode at Local Devcontainer
+
+### 1. Anycontainer
+1. Build with empty workspace
+
+2. 
+
+### 2. Devcontainer 
+
 https://github.com/docker/awesome-compose/tree/master/apache-php

@@ -1,20 +1,22 @@
 #!/bin/sh
 
 set -eux
-LOCAL_WORKSPACE=$(echo "${GITHUB_REPOSITORY}" | cut -f 2 -d "/")
+#LOCAL_WORKSPACE=$(echo "${GITHUB_REPOSITORY}" | cut -f 2 -d "/")
+SITE_HOST=default
 
 echo "Installing Subversion..."
 #sudo apk update
 #sudo apk add --no-cache  git-svn subversion perl
 
-if [ -z ${CODESPACE_NAME+x} ]; then
-	SITE_HOST="http://localhost:8080"
-else
-	SITE_HOST="https://${CODESPACE_NAME}-8080.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"
-fi
+#
+#if [ -z ${CODESPACE_NAME+x} ]; then
+#	SITE_HOST="http://localhost:8080"
+#else
+#	SITE_HOST="https://${CODESPACE_NAME}-8080.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"
+#fi
 
 # Install dependencies
-cd /workspaces/${LOCAL_WORKSPACE}
+#cd /workspaces/${LOCAL_WORKSPACE}
 #npm install && npm run build:dev
 
 # Config ENV
@@ -23,6 +25,6 @@ cd /workspaces/${LOCAL_WORKSPACE}
 
 
 # Install WordPress and activate the plugin/theme.
-cd /var/www/html
-echo "Setting up WordPress at $SITE_HOST"
+#cd /var/www/html
+#echo "Setting up WordPress at $SITE_HOST"
 #wp core install --url="$SITE_HOST" --title="WordPress Trunk" --admin_user="admin" --admin_email="admin@example.com" --admin_password="password" --skip-email

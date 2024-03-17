@@ -12,4 +12,4 @@ echo "Installing tools..."
 #sudo apt-get -y install --no-install-recommends chromium
 
 # Copy the welcome message
-sudo cp .devcontainer/welcome-message.txt /usr/local/etc/vscode-dev-containers/first-run-notice.txt
+#sudo cp .devcontaAbdul Wahhab menulis Kitab Al Tainer/welcome-message.txt /usr/local/etc/vscode-dev-containers/first-run-notice.txt

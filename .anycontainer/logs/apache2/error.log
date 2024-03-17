@@ -263,3 +263,53 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Thu Mar 14 22:00:54.657372 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.3.3 OpenSSL/3.0.11 configured -- resuming normal operations
 [Thu Mar 14 22:00:54.657476 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
 [Thu Mar 14 22:01:31.950947 2024] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Thu Mar 14 22:05:24.634284 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.3.3 OpenSSL/3.0.11 configured -- resuming normal operations
+[Thu Mar 14 22:05:24.634346 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 14 22:06:01.621327 2024] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Thu Mar 14 22:07:03.452863 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.3.3 OpenSSL/3.0.11 configured -- resuming normal operations
+[Thu Mar 14 22:07:03.453154 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 14 22:07:40.683566 2024] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Thu Mar 14 22:10:58.099871 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.3.3 OpenSSL/3.0.11 configured -- resuming normal operations
+[Thu Mar 14 22:10:58.099941 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 14 22:11:35.027675 2024] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Thu Mar 14 22:53:14.813797 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.3.3 OpenSSL/3.0.11 configured -- resuming normal operations
+[Thu Mar 14 22:53:14.813882 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 14 22:53:38.539481 2024] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Thu Mar 14 23:12:21.113469 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.2.16 OpenSSL/3.0.11 configured -- resuming normal operations
+[Thu Mar 14 23:12:21.136525 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 14 23:13:00.000639 2024] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Thu Mar 14 23:13:21.578152 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.2.16 OpenSSL/3.0.11 configured -- resuming normal operations
+[Thu Mar 14 23:13:21.578245 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 14 23:13:58.570100 2024] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Thu Mar 14 23:14:18.494742 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.2.16 OpenSSL/3.0.11 configured -- resuming normal operations
+[Thu Mar 14 23:14:18.507237 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 14 23:14:55.083141 2024] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Thu Mar 14 23:15:16.488012 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.2.16 OpenSSL/3.0.11 configured -- resuming normal operations
+[Thu Mar 14 23:15:16.488114 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Mar 14 23:15:47.674391 2024] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Thu Mar 14 23:52:08.681496 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.2.16 OpenSSL/3.0.11 configured -- resuming normal operations
+[Thu Mar 14 23:52:08.784142 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Mar 15 00:47:55.535355 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.2.16 OpenSSL/3.0.11 configured -- resuming normal operations
+[Fri Mar 15 00:47:55.597431 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Mar 15 03:58:11.558214 2024] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Fri Mar 15 04:00:24.904697 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.2.16 OpenSSL/3.0.11 configured -- resuming normal operations
+[Fri Mar 15 04:00:24.990731 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Mar 15 04:06:05.541173 2024] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Fri Mar 15 04:07:58.294395 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.2.16 OpenSSL/3.0.11 configured -- resuming normal operations
+[Fri Mar 15 04:07:58.476739 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Mar 15 18:22:21.676926 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.3.3 OpenSSL/3.0.11 configured -- resuming normal operations
+[Fri Mar 15 18:22:21.689227 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Mar 15 18:22:49.305200 2024] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Fri Mar 15 18:25:42.956596 2024] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Fri Mar 15 21:58:20.503113 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.2.16 OpenSSL/3.0.11 configured -- resuming normal operations
+[Fri Mar 15 21:58:20.561658 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Mar 15 22:25:47.231252 2024] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Fri Mar 15 23:34:58.999795 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.2.16 OpenSSL/3.0.11 configured -- resuming normal operations
+[Fri Mar 15 23:34:59.044643 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sat Mar 16 09:25:10.457610 2024] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Sat Mar 16 09:26:56.730175 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.2.16 OpenSSL/3.0.11 configured -- resuming normal operations
+[Sat Mar 16 09:26:56.783194 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Mar 17 10:29:26.129754 2024] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Sun Mar 17 13:40:00.375201 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.57 (Debian) PHP/8.2.16 OpenSSL/3.0.11 configured -- resuming normal operations
+[Sun Mar 17 13:40:00.433631 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Mar 17 14:25:50.918739 2024] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
