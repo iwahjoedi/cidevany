@@ -5,8 +5,8 @@ services:
     #image: shinsenter/php:8.2-fpm-apache
     #image: php:apache-bullseye
     #image: anycontainer:cidevanny-bullseye
-    #image: php:8.3-apache-bookworm
-    image: debian:bookworm
+    image: php:8.3-apache-bookworm
+    #image: debian:bookworm
     restart: always
     extra_hosts:
       - "host.docker.internal:host-gateway"
