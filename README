@@ -1,4 +1,4 @@
-# Codeigniter Development Environment Anyware
+# Codeigniter Development Environment Anyware | CIDEVANY
 
 ## Requirement 
 1. Debian
@@ -7,8 +7,9 @@
 4. NodeJS
  
 ## Mode
-1. VSCode at Local Anycontainer
-2. VSCode at Local Devcontainer
+1. Local Anycontainer
+2. Local/Codespace Devcontainer
+3. Remote Gitpod
 
 ### 1. Anycontainer
 1. Build with empty workspace

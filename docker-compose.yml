@@ -5,8 +5,8 @@ services:
   ##
   # The web server container.
   ##
-  wordpress-develop:
-    image: ${ANYCONTAINER_IMAGE}
+  workspace:
+    image: ${PHPAPACHE_IMAGE}
 
     networks:
       - cidevnet

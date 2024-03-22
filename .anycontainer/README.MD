@@ -1,10 +1,13 @@
 # Anycontainer
 Anycontainer is a docker image builder for some configuration.
 
+Base Workspace Image:
+- php:8.3-apache-bookworm
+
 ## General Supported Platform
-1. Codeigniter 
-2. Wordpress
-3. Solana
+1. Codeigniter -> cidevany
+2. Wordpress -> wpdevany
+3. Solana -> soladevany
 
 ### This repo is Codeigniter Platform
 Stacks:
