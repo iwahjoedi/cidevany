@@ -66,45 +66,45 @@ build () {
                 echo -e "### building ./build/$buildtarget-$version.env \n"
                 $dc --env-file ./build/$buildtarget-$version.env up -d --build
                 # wait for mysql to initialize
-                sleep 30
+                #sleep 30
                 # check definitions
-                curlmysqli=$(curl -s --max-time 15 --connect-timeout 15 http://localhost/test_db.php |grep proper |wc -l |tr -d '[:space:]')
-                curlpdo=$(curl -s --max-time 15 --connect-timeout 15 http://localhost/test_db_pdo.php |grep proper |wc -l |tr -d '[:space:]')
+                #curlmysqli=$(curl -s --max-time 15 --connect-timeout 15 http://localhost/test_db.php |grep proper |wc -l |tr -d '[:space:]')
+                #curlpdo=$(curl -s --max-time 15 --connect-timeout 15 http://localhost/test_db_pdo.php |grep proper |wc -l |tr -d '[:space:]')
 
                         # check if we can create a successfull connection to the database
                         # 1=OK  everything else is not ok
-                        if [ "$curlmysqli" -ne "1" ]; then
-                                echo -e "### ERROR: myqli database check failed expected string 'proper' not found \n"
-                                echo "### ...stopping container"
-                                $dc --env-file ./build/$buildtarget-$version.env down
-                                exit
-                        else
-                                echo -e "\n OK - mysqli database check successfull \n"
-                                sleep 3
-                        fi
+                        #if [ "$curlmysqli" -ne "1" ]; then
+                        #        echo -e "### ERROR: myqli database check failed expected string 'proper' not found \n"
+                        #        echo "### ...stopping container"
+                        #        $dc --env-file ./build/$buildtarget-$version.env down
+                        #        exit
+                        #else
+                        #        echo -e "\n OK - mysqli database check successfull \n"
+                        #        sleep 3
+                        #fi
 
-                        if [ "$curlpdo" -ne "1" ]; then
-                                echo -e "### ERROR: pdo database check failed expected string 'proper' not found \n"
-                                echo "### ...stopping container"
-                                $dc --env-file ./build/$buildtarget-$version.env down
-                                exit
-                        else
-                                echo -e "\n OK - pdo database check successfull \n"
-                                sleep 3
-                        fi
+                        #if [ "$curlpdo" -ne "1" ]; then
+                        #        echo -e "### ERROR: pdo database check failed expected string 'proper' not found \n"
+                        #        echo "### ...stopping container"
+                        #        $dc --env-file ./build/$buildtarget-$version.env down
+                        #        exit
+                        #else
+                        #        echo -e "\n OK - pdo database check successfull \n"
+                        #        sleep 3
+                        #fi
 
-                echo "### ... stopping container"
-                $dc --env-file ./build/$buildtarget-$version.env down --remove-orphans
+                #echo "### ... stopping container"
+                #$dc --env-file ./build/$buildtarget-$version.env down --remove-orphans
 }
 
 buildenvfile () {
-
+        
 cat sample.env > ./build/"$buildtarget"-"$version".env
-sed -i "s/COMPOSE_PROJECT_NAME=cidevany/COMPOSE_PROJECT_NAME=$buildtarget-build/" ./build/"$buildtarget"-"$version".env
+sed -i "s/COMPOSE_PROJECT_NAME=cidevany/COMPOSE_PROJECT_NAME=cidevany/" ./build/"$buildtarget"-"$version".env
 sed -i "s/PHPVERSION=php8/PHPVERSION=$buildtarget/" ./build/"$buildtarget"-"$version".env
 sed -i "s/NODEVERSION=php8/NODEVERSION=$nodeversion/" ./build/"$buildtarget"-"$version".env
 sed -i "s/DATABASE=mysql8/DATABASE=$version/" ./build/"$buildtarget"-"$version".env
-sed -i "s/ANYCONTAINER_IMAGE=default/ANYCONTAINER_IMAGE=$version/" ../.devconfig
+#sed -i "s/PHPAPACHE_IMAGE=default/PHPAPACHE_IMAGE=devany-da/" ../.devconfig
 }
 
 prepare () {
@@ -151,7 +151,7 @@ echo "> $nosqlversion"
 echo "> $phpmyadminversion"
 echo "> $nodeversion"
 
-# we don't want to test. we wanto build
+# we don't want to test. we wan to build
 buildtarget=$phpversion
 version=$rdbmsversion
 

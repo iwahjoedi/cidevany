@@ -14,6 +14,10 @@ Stacks:
 4. PHPMyAdmin 
 
 ## How to use
+### 1. Build Anycontainer Images
 cd .anycontainer
 ./test_build_anycontainer.sh -b php83 
 ./build_anycontainer.sh -a php83 -b mariadb103 -c redis724 -d phpmyadmin521 -e node20
+
+### 2. Run Anycontainer Server
+Run using Cidevany Workspace

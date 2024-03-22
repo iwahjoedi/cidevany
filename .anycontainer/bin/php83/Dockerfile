@@ -11,12 +11,10 @@ RUN apt-get update && \
 RUN addgroup --gid $GID $USER
 RUN adduser --uid $UID --gid $GID --disabled-password --gecos "" $USER
 RUN echo '${USER} ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
-
-
-
+RUN echo "${USER}:pass" | chpasswd
 
 # Copy files into the container and set the appropriate permissions
-#COPY --chown=nonroot:nonroot . /home/nonroot/app
+COPY --chown=$USER:$USER . /home/$USER/workspace
 #RUN chmod -R 755 /home/nonroot/app
 
 ### STOPING

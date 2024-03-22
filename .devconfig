@@ -1,1 +1,4 @@
-ANYCONTAINER_IMAGE=mariadb103
+PHPAPACHE_IMAGE=cidevany_devserver
+RDBMS_IMAGE=cidevany_mysql
+NOSQL_IMAGE=cidevany_redis
+PHPMYADMIN_IMAGE=devany_phpmyadmin

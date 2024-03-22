@@ -1,7 +1,7 @@
 version: "3.1"
 
 services:
-  webserver:
+  devserver:
     build:
       context: ./bin/${PHPVERSION}
       args:
@@ -14,7 +14,7 @@ services:
       - "${HOST_MACHINE_UNSECURE_HOST_PORT}:80"
       - "${HOST_MACHINE_SECURE_HOST_PORT}:443"
     links:
-      - database
+      - mysql
     volumes:
       - ${DOCUMENT_ROOT-./www}:/var/www/html:rw
       - ${PHP_INI-./config/php/php.ini}:/usr/local/etc/php/php.ini
@@ -34,7 +34,7 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
-  database:
+  mysql:
     build:
       context: "./bin/${DATABASE}"
     container_name: "${COMPOSE_PROJECT_NAME}-${DATABASE}"
@@ -56,9 +56,9 @@ services:
       context: ./bin/${PHPMYADMINVERSION}
     container_name: "${COMPOSE_PROJECT_NAME}-phpmyadmin"
     links:
-      - database
+      - mysql
     environment:
-      PMA_HOST: database
+      PMA_HOST: mysql
       PMA_PORT: 3306
       PMA_USER: root
       PMA_PASSWORD: ${MYSQL_ROOT_PASSWORD}
