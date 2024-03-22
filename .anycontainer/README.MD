@@ -12,3 +12,8 @@ Stacks:
 2. PHP 8.3
 3. Redis 7.2.3
 4. PHPMyAdmin 
+
+## How to use
+cd .anycontainer
+./test_build_anycontainer.sh -b php83 
+./build_anycontainer.sh -a php83 -b mariadb103 -c redis724 -d phpmyadmin521 -e node20

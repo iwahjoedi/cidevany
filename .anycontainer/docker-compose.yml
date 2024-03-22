@@ -1,9 +1,13 @@
-version: "3"
+version: "3.1"
 
 services:
   webserver:
     build:
       context: ./bin/${PHPVERSION}
+      args:
+        - HOST_UID:${HOST_UID}
+        - HOST_GUID:${HOST_GID}
+        - HOST_UID:${HOST_DEVUSER}
     container_name: "${COMPOSE_PROJECT_NAME}-${PHPVERSION}"
     restart: "always"
     ports:

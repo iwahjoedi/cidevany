@@ -1,5 +1,44 @@
 FROM php:8.3-apache-bookworm
 
+#ARG UID
+#ARG GID
+#ARG DEVUSER 
+
+ARG HOST_DEVUSER
+ARG HOST_GID
+
+RUN echo -e "${HOST_UID}"
+RUN echo -e "${HOST_GID}"
+RUN echo -e "${HOST_DEVUSER}"
+
+# Update the package list, install sudo, create a non-root user, and grant password-less sudo permissions
+RUN apt-get update && \
+    apt-get install -y sudo
+
+RUN addgroup --gid 1000 vscode
+RUN adduser --uid $HOST_UID --gid $HOST_GID --disabled-password --gecos "" $HOST_DEVUSER
+RUN echo '$DEVUSER ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+
+
+#RUN addgroup --gid $GID $DEVUSER && \
+#    adduser --uid $UID --gid $GID --disabled-password --gecos "" nonroot && \
+#    echo 'nonroot ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+
+# Set the non-root user as the default user
+USER $DEVUSER
+
+# Set the working directory
+WORKDIR /home/$DEVUSER/app
+
+
+
+# Copy files into the container and set the appropriate permissions
+COPY --chown=nonroot:nonroot . /home/nonroot/app
+RUN chmod -R 755 /home/nonroot/app
+
+
+#---------
+
 # Surpresses debconf complaints of trying to install apt packages interactively
 # https://github.com/moby/moby/issues/4032#issuecomment-192327844
  
