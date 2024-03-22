@@ -1,5 +1,8 @@
 # Codeigniter Development Environment Anyware | CIDEVANY
 
+The idea is making development onboarding easy and stable. You just need to install Docker nothing more.
+Local Terminal will use docker not Host.
+
 ## Requirement 
 1. Debian
 2. Apache/SSL
@@ -11,11 +14,17 @@
 2. Local/Codespace Devcontainer
 3. Remote Gitpod
 
-### 1. Anycontainer
+### 1. Local Anycontainer
+The main problem to solve is working with limited internet. At least for building images.
+Next time use will be locally. 
+
 1. Build with empty workspace
 
 2. 
 
-### 2. Devcontainer 
+### 2. Local/Codespace Devcontainer 
 
 https://github.com/docker/awesome-compose/tree/master/apache-php
+
+
+### 3. Remote Gitpod
