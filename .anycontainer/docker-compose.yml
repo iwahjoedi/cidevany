@@ -5,9 +5,9 @@ services:
     build:
       context: ./bin/${PHPVERSION}
       args:
-        - HOST_UID:${HOST_UID}
-        - HOST_GUID:${HOST_GID}
-        - HOST_UID:${HOST_DEVUSER}
+        UID: "${HOST_UID-1000}"
+        GID: "${HOST_GID-1000}"
+        USER: "${HOST_USER-vscode}"
     container_name: "${COMPOSE_PROJECT_NAME}-${PHPVERSION}"
     restart: "always"
     ports:
